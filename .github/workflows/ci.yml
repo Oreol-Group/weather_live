@@ -39,7 +39,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          bundler_ver: '2.5.6'
+          bundler: '2.5.6'
           bundler-cache: true
 
   lint:
@@ -53,7 +53,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2.2"
-          bundler_ver: '2.5.6'
+          bundler: '2.5.6'
           bundler-cache: true
       - name: Install Ruby Dependencies
         run: |
