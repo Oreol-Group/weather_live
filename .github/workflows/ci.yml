@@ -39,10 +39,13 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+          bundler_ver: '2.5.6'
           bundler-cache: true
 
   lint:
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_GEMFILE: .ci.gemfile
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -50,6 +53,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2.2"
+          bundler_ver: '2.5.6'
           bundler-cache: true
       - name: Install Ruby Dependencies
         run: |
