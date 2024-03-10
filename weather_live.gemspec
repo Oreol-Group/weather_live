@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 3.0.0'
 
   spec.add_dependency 'activejob', '~> 7.1', '>= 7.1.3.2'
+  spec.add_dependency 'clockwork', '~> 3.0', '>= 3.0.2'
   spec.add_dependency 'faraday', '~> 2.9'
   spec.add_dependency 'faraday-retry', '~> 2.2'
   spec.add_dependency 'kredis', '~> 1.7'

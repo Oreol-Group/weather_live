@@ -39,3 +39,6 @@ Lint/ConstantDefinitionInBlock:
 
 Metrics/ModuleLength:
   Max: 150
+
+Style/AccessorGrouping:
+  Enabled: false
