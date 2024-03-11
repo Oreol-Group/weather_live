@@ -30,7 +30,7 @@ After that, init the API with the `weather_live` library in your project:
 ### Rails
 
 ```ruby
-# config/initializers/open-weather-api.rb
+# config/initializers/weather_live.rb
 
 Weather.configure do |config|
   # API key
