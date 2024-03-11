@@ -42,3 +42,7 @@ Metrics/ModuleLength:
 
 Style/AccessorGrouping:
   Enabled: false
+
+Style/RescueStandardError:
+  Exclude:
+    - lib/weather/live/cache.rb

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Weather
-  module Live
+  class Live
     class Base
       attr_reader   :api_obj, :response_content_type, :status
       attr_accessor :http_client, :hash_key
@@ -21,9 +21,9 @@ module Weather
         @http_client = Weather::Connection.start
       end
 
-      def execute(**hash)
+      def execute(**args)
         # verify parameters
-        @parameters = build_params(hash)
+        @parameters = build_params(args)
         # Redis request
         responce = Weather::Live::Cache.fetch_cache(extract_hash_key(@parameters))
         # API request
@@ -32,7 +32,7 @@ module Weather
 
       private
 
-      def extract_hash_key(**data)
+      def extract_hash_key(data)
         raise NotImplementedError, "#{self.class}.#{__method__}"
       end
 

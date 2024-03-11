@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require 'open-weather-api/version'
-
-require 'weather/live'
+require 'weather/version'
 
 # Dependencies
 require 'faraday'
@@ -15,12 +13,18 @@ require 'weather/connection'
 # live
 require 'weather/live/base'
 require 'weather/live/current'
+require 'weather/live/raw'
+require 'weather/live/cache'
+require 'weather/live/bulk_import'
 
 # Configuration
 require 'weather/config'
 
+# Job
+require 'weather/import_current_job'
+
 # Main file
-require 'weather/api'
+require 'weather/live'
 
 module Weather
   # Base exception for the OpenWeatherMap library

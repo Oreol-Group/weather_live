@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Weather
-  module Live
+  class Live
     class Raw
       class << self
         def serialize(body)

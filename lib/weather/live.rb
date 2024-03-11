@@ -48,7 +48,11 @@ module Weather
     #   - on_demand (manual download) [default]
     #   - polling (automatic scheduled download)
     def initialize(options = {})
-      @api_key = options[:api_key] || options['api_key']
+      # @api_key = options[:api_key] || options['api_key']
+      # ObjectSpace.each_object(Weather::Live) do |el|
+      #   raise "The API key #{@api_key} is already in use" if el.api_key == @api_key
+      # end
+
       @default_language = options[:default_language] || options['default_language'] || 'en'
       @default_country_code = options[:default_country_code] || options['default_country_code']
       @default_units = options[:default_units] || options['default_units'] || 'metric'
@@ -92,6 +96,8 @@ module Weather
     # Clear the cache.
     def clear_cache
       Weather::Live::Cache.remove
+    rescue NoMethodError
+      nil
     end
 
     private
