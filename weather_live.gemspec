@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'kredis', '~> 1.7'
   spec.add_development_dependency 'bundler', '~> 2.5', '>= 2.5.6'
   spec.add_development_dependency 'faker', '~> 3.2', '>= 3.2.3'
-  spec.add_development_dependency 'rake', '~> 13.1.0'
+  spec.add_development_dependency 'rake', '~> 13.2.1'
   spec.add_development_dependency 'rspec', '~> 3.13'
   spec.add_development_dependency 'rubocop', '~> 1.62'
   spec.add_development_dependency 'rubocop-rake', '~> 0.6.0'
